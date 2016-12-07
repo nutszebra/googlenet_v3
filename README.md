@@ -22,10 +22,10 @@ Test: Pictures are resized to 406x406, then they are normalized locally. Single 
 * Auxiliary classifiers  
 No implementation
 
-* Gradient clipping
+* Gradient clipping  
 2.0
 
-* RMSprop
+* RMSprop  
 decay is 0.9 and eps is 1.0 as [[1]][Paper] said.
 
 * Learning rate  
