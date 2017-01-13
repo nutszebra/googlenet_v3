@@ -264,7 +264,7 @@ class Googlenet(nutszebra_chainer.Model):
         # global average pooling
         h = F.reshape(F.average_pooling_2d(h, (y, x)), (num, categories))
         h = F.dropout(h, ratio=0.2, train=train)
-        h = F.relu(self.linear(h))
+        h = self.linear(h)
         return h
 
     def calc_loss(self, y, t):
