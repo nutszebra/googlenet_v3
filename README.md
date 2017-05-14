@@ -16,17 +16,17 @@ Implementation of GoogLeNet-v3 [[1]][Paper] by chainer
 # Details about my implementation
 
 * Data augmentation  
-Train: Pictures are randomly resized in the range of [299, 512], then 299x299 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
-Test: Pictures are resized to 406x406, then they are normalized locally. Single image test is used to calculate total accuracy. 
+Train: Pictures are randomly resized in the range of [256, 512], then 224x224 patches are extracted randomly and are normalized locally. Horizontal flipping is applied with 0.5 probability.  
+Test: Pictures are resized to 384x384, then they are normalized locally. Single image test is used to calculate total accuracy. 
 
 * Auxiliary classifiers  
-No implementation
+No implementation  
 
 * Gradient clipping  
-2.0
+2.0  
 
 * RMSprop  
-decay is 0.9 and eps is 1.0 as [[1]][Paper] said.
+lr=0.045, alpha=0.99, eps=1e-8
 
 * Learning rate  
 Initial learning rate is 0.045 acoording to [[1]][Paper], and it is multiplied by 0.94 at every 2 epochs.
@@ -44,8 +44,10 @@ According to [[2]][Paper], weight decay is 4.0*10^-5.
 <img src="https://github.com/nutszebra/googlenet_v3/blob/master/loss.jpg" alt="loss" title="loss">
 <img src="https://github.com/nutszebra/googlenet_v3/blob/master/accuracy.jpg" alt="total accuracy" title="total accuracy">
 
-# References
+
+# References  
 Rethinking the Inception Architecture for Computer Vision [[1]][Paper]  
 Xception: Deep Learning with Depthwise Separable Convolutions [[2]][Paper1]  
-[paper]: https://arxiv.org/abs/1512.00567 "Paper"
-[paper1]: https://arxiv.org/pdf/1610.02357v2.pdf "Paper1"
+
+[paper]: https://arxiv.org/abs/1512.00567 "Paper"  
+[paper1]: https://arxiv.org/pdf/1610.02357v2.pdf "Paper1"  
