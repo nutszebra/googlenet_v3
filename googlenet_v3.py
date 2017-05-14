@@ -137,7 +137,10 @@ class Inception_B(nutszebra_chainer.Model):
             a = self.double_convnxn_4(a, train)
             b = self.convnxn_1(x, train)
             b = self.convnxn_2(b, train)
-            c = pool(x, ksize=3, stride=self.stride, pad=0)
+            c = pool(x, ksize=3, stride=self.stride, pad=1)
+            print(a.shape)
+            print(b.shape)
+            print(c.shape)
             return F.concat((a, b, c), axis=1)
 
     def count_parameters(self):

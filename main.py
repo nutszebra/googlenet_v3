@@ -52,6 +52,6 @@ if __name__ == '__main__':
     optimizer = nutszebra_optimizer.OptimizerGooglenetV3(model, lr=lr)
     args['model'] = model
     args['optimizer'] = optimizer
-    args['da'] = nutszebra_data_augmentation.DataAugmentationCifar10NormalizeHuge
+    args['da'] = nutszebra_data_augmentation.DataAugmentationCifar10NormalizeBigger
     main = nutszebra_cifar10.TrainCifar10(**args)
     main.run()
