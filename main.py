@@ -44,12 +44,14 @@ if __name__ == '__main__':
                         help='leraning rate')
 
     args = parser.parse_args().__dict__
+    print(args)
     lr = args.pop('lr')
 
     print('generating model')
     model = googlenet_v3.Googlenet(10)
     print('Done')
     optimizer = nutszebra_optimizer.OptimizerGooglenetV3(model, lr=lr)
+    print('Parameters: {}'.format(model.count_parameters()))
     args['model'] = model
     args['optimizer'] = optimizer
     args['da'] = nutszebra_data_augmentation.DataAugmentationCifar10NormalizeBigger
