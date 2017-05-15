@@ -214,7 +214,7 @@ class OptimizerGooglenetV3(Optimizer):
 
     def __init__(self, model=None, lr=0.045, weight_decay=4.0e-5, clip=2.0):
         super(OptimizerGooglenetV3, self).__init__(model)
-        optimizer = optimizers.RMSprop(lr)
+        optimizer = optimizers.MomentumSGD(lr, 0.9)
         weight_decay = chainer.optimizer.WeightDecay(weight_decay)
         clip = chainer.optimizer.GradientClipping(clip)
         optimizer.setup(self.model)
