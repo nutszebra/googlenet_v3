@@ -25,8 +25,9 @@ No implementation
 * Gradient clipping  
 2.0  
 
-* RMSprop  
-lr=0.045, alpha=0.99, eps=1e-8
+* SGD momentum
+lr=0.045, momentum=0.9
+
 
 * Learning rate  
 Initial learning rate is 0.045 acoording to [[1]][Paper], and it is multiplied by 0.94 at every 2 epochs.
