@@ -40,7 +40,7 @@ According to [[2]][Paper], weight decay is 4.0*10^-5.
 
 | network              | depth  | total accuracy (%) |
 |:---------------------|--------|-------------------:|
-| my implementation    | 49     | soon               |
+| my implementation    | 49     | 94.071             |
 
 <img src="https://github.com/nutszebra/googlenet_v3/blob/master/loss.jpg" alt="loss" title="loss">
 <img src="https://github.com/nutszebra/googlenet_v3/blob/master/accuracy.jpg" alt="total accuracy" title="total accuracy">
