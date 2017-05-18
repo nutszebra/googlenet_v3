@@ -26,11 +26,11 @@ No implementation
 2.0  
 
 * SGD momentum
-lr=0.045, momentum=0.9
+lr=0.1, momentum=0.9
 
 
 * Learning rate  
-Initial learning rate is 0.045 acoording to [[1]][Paper], and it is multiplied by 0.94 at every 2 epochs.
+Initial learning rate is 0.1 acoording to [[1]][Paper], and it is multiplied by 0.94 at every 2 epochs.
 
 * Weight decay  
 According to [[2]][Paper], weight decay is 4.0*10^-5.
@@ -40,7 +40,7 @@ According to [[2]][Paper], weight decay is 4.0*10^-5.
 
 | network              | depth  | total accuracy (%) |
 |:---------------------|--------|-------------------:|
-| my implementation    | 49     | 94.071             |
+| my implementation    | 49     | 94.74              |
 
 <img src="https://github.com/nutszebra/googlenet_v3/blob/master/loss.jpg" alt="loss" title="loss">
 <img src="https://github.com/nutszebra/googlenet_v3/blob/master/accuracy.jpg" alt="total accuracy" title="total accuracy">
